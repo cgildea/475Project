@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  <Ad>
+    <ImageUrl>Images/Ads/cookie1.jpeg</ImageUrl>
+    <NavigateUrl>https://www.cia.gov/library/publications/the-world-factbook/geos/fr.html</NavigateUrl>
+    <AlternateText>France Information</AlternateText>
+    <Impressions>1</Impressions>
+  </Ad>
+  <Ad>
+    <ImageUrl>Images/Ads/cookie2.jpg</ImageUrl>
+    <NavigateUrl>https://www.cia.gov/library/publications/the-world-factbook/geos/fr.html</NavigateUrl>
+    <AlternateText>France Information</AlternateText>
+    <Impressions>1</Impressions>
+  </Ad>
+  <Ad>
+    <ImageUrl>Images/Ads/cookie3.jpg</ImageUrl>
+    <NavigateUrl>https://www.cia.gov/library/publications/the-world-factbook/geos/fr.html</NavigateUrl>
+    <AlternateText>France Information</AlternateText>
+    <Impressions>1</Impressions>
+  </Ad>
+</Advertisements>
