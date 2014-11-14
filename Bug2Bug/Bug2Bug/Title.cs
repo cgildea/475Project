@@ -23,7 +23,8 @@ namespace Bug2Bug
         public string Title1 { get; set; }
         public int EditionNumber { get; set; }
         public string Copyright { get; set; }
-	
+        public int Price { get; set; }
+    
         public virtual ICollection<Author> Authors { get; set; }
     }
 }
