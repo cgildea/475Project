@@ -12,6 +12,10 @@
 <p>
       <asp:GridView ID="titlesGridView" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
          <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+          <Columns>
+              <asp:HyperLinkField DataNavigateUrlFields="ISBN" DataNavigateUrlFormatString="Order.aspx?isbn={0}" Text="Select"></asp:HyperLinkField>
+          </Columns>
+
           <EditRowStyle BackColor="#999999" />
          <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
          <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
