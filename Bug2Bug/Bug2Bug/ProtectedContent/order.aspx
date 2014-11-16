@@ -1,15 +1,14 @@
-﻿<%@ Page Title="Books" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Books.aspx.cs" Inherits="Bug2Bug.ProtectedContent.Books" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="order.aspx.cs" Inherits="Bug2Bug.ProtectedContent.order" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
-   </asp:Content>
+</asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
+
    <p>
-      Select author:&nbsp;
-      <asp:DropDownList ID="authorsDropDownList" runat="server" AutoPostBack="True" OnSelectedIndexChanged="authorsDropDownList_SelectedIndexChanged">
-      </asp:DropDownList>
+      Your Shopping Cart:
    </p>
-   <p>
+    <p>
       <asp:GridView ID="titlesGridView" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
          <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
           <Columns>
@@ -28,7 +27,8 @@
          <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
       </asp:GridView>
    </p>
-   <a id="G1" runat="server" href="~/ProtectedContent/order">Go to cart</a>
+    <a id="G2" runat="server" href="~/ProtectedContent/order">Continue Shopping</a>
+    <a id="G3" runat="server" href="~/ProtectedContent/order">Check Out</a>
    <p>
       &nbsp;</p>
 </asp:Content>

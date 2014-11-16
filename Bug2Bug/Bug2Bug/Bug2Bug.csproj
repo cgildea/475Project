@@ -237,6 +237,7 @@
     </Content>
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="ProtectedContent\Books.aspx" />
+    <Content Include="ProtectedContent\order.aspx" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.24.js" />
@@ -367,6 +368,13 @@
     </Compile>
     <Compile Include="ProtectedContent\Books.aspx.designer.cs">
       <DependentUpon>Books.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProtectedContent\order.aspx.cs">
+      <DependentUpon>order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProtectedContent\order.aspx.designer.cs">
+      <DependentUpon>order.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
