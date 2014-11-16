@@ -9,7 +9,7 @@
       <asp:DropDownList ID="authorsDropDownList" runat="server" AutoPostBack="True" OnSelectedIndexChanged="authorsDropDownList_SelectedIndexChanged">
       </asp:DropDownList>
    </p>
-<p>
+   <p>
       <asp:GridView ID="titlesGridView" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
          <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
           <Columns>
@@ -28,6 +28,7 @@
          <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
       </asp:GridView>
    </p>
+   <a id="G1" runat="server" href="~/ProtectedContent/Books">Go to cart</a>
    <p>
       &nbsp;</p>
 </asp:Content>
