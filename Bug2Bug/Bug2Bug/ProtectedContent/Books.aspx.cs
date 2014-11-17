@@ -3,6 +3,8 @@
 using System;
 using System.Data.Entity;
 using System.Linq;
+using System.Collections.Generic;
+using Bug2Bug;
 
 namespace Bug2Bug.ProtectedContent
 {
@@ -65,6 +67,28 @@ namespace Bug2Bug.ProtectedContent
          titlesGridView.DataSource = titlesQuery;
          titlesGridView.DataBind(); // displays query results  
       } // end method authorsDropDownList_SelectedIndexChanged
+
+       protected void add(object sender, EventArgs e)
+      {
+          string userId = "tempuserid";
+
+          List<string> titlesList;
+          if (Session[userId] == null)
+          {
+              titlesList = new List<string>();
+          }
+          else
+          {
+              titlesList = Session[userId] as List<string>;
+          }
+
+          int index = titlesGridView.SelectedIndex;
+          titlesList.Add(titlesGridView.Rows[index].Cells[1].Text);
+
+          Session[userId] = titlesList;
+
+          Response.Redirect("~/ProtectedContent/order");
+      }
    } // end class Books
 } // end namespace Bug2Bug.ProtectedContent
 

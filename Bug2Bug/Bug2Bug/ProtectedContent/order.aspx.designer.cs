@@ -13,13 +13,13 @@ namespace Bug2Bug.ProtectedContent {
     public partial class order {
         
         /// <summary>
-        /// titlesGridView control.
+        /// shoppingCart control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView titlesGridView;
+        protected global::System.Web.UI.WebControls.ListBox shoppingCart;
         
         /// <summary>
         /// G2 control.

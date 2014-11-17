@@ -6,14 +6,14 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
    <p>
       Select author:&nbsp;
-      <asp:DropDownList ID="authorsDropDownList" runat="server" AutoPostBack="True" OnSelectedIndexChanged="authorsDropDownList_SelectedIndexChanged">
+      <asp:DropDownList ID="authorsDropDownList" runat="server" AutoPostBack="True"  OnSelectedIndexChanged="authorsDropDownList_SelectedIndexChanged">
       </asp:DropDownList>
    </p>
    <p>
-      <asp:GridView ID="titlesGridView" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+      <asp:GridView ID="titlesGridView" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="add" >
          <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
           <Columns>
-              <asp:HyperLinkField DataNavigateUrlFields="ISBN" DataNavigateUrlFormatString="Order.aspx?isbn={0}" Text="Select"></asp:HyperLinkField>
+              <asp:CommandField ShowSelectButton="True"></asp:CommandField>
           </Columns>
 
           <EditRowStyle BackColor="#999999" />
