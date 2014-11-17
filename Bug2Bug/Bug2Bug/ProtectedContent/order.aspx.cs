@@ -30,15 +30,20 @@ namespace Bug2Bug.ProtectedContent
             else 
             {
                 List<string> titleList = Session[userId] as List<string>;
-                //dbcontext.Titles.Load();
+                dbcontext.Titles.Load();
                 
-                // // query to get books for the selected author
-                // var titlesQuery =
-                //    from book in dbcontext.Titles.Local
-                //    where book.ISBN in titleList
-                //    select book;
+                // query to get books for the selected author
+                var titlesQuery =
+                    from book in dbcontext.Titles.Local
+                    where titleList.Contains(book.ISBN)
+                    select new
+                    {
+                        Price = book.Price,
+                        ISBN = book.ISBN,
+                        Title = book.Title1
+                    };
 
-                shoppingCart.DataSource = titleList;
+                shoppingCart.DataSource = titlesQuery;
             }
 
             shoppingCart.DataBind();
