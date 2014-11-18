@@ -18,6 +18,6 @@
 
     <a id="G4" runat="server" href="~/ProtectedContent/Books">Review Shopping Cart</a>
     <a id="G5" runat="server" href="~/ProtectedContent/order">Review Order</a>
-    <a id="G6" runat="server" href="~/ProtectedContent/checkout">Finalize</a>
+    <a id="G6" runat="server" href="~/ProtectedContent/final">Finalize</a>
     <p>
 </asp:Content>
