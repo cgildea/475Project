@@ -43,8 +43,7 @@ namespace Bug2Bug.ProtectedContent
                 int subtotal = titlesQuery.Select(c => c.Price).Sum();
                 decimal tax = 0.08M;
                 decimal total = subtotal * (1 + tax);
-                //priceText.Text = "Subtotal: " + subtotal.ToString() +
-                //    "\nTax: " + tax.ToString() +"\nTotal: " + total.ToString();
+
                 subtotalText.Text = ((decimal)subtotal).ToString();
                 taxText.Text = tax.ToString();
                 totalText.Text = total.ToString();
