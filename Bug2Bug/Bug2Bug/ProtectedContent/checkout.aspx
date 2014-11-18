@@ -10,13 +10,14 @@
       </asp:ListBox>
     </p>
 
-    <p>Types of Payments:
-      <asp:DropDownList ID="PaymentDropDownList" runat="server">
-      </asp:DropDownList>
+    <p>Types of Payments (Visa or MasterCharge):
+      <asp:FormView ID="VisaForm" runat="server">
+
+      </asp:FormView>
     </p>
 
-    <a id="G4" runat="server" href="~/ProtectedContent/Books">Add More Books to Buy</a>
-    <a id="G5" runat="server" href="~/ProtectedContent/order">Re-View Order</a>
+    <a id="G4" runat="server" href="~/ProtectedContent/Books">Review Shopping Cart</a>
+    <a id="G5" runat="server" href="~/ProtectedContent/order">Review Order</a>
     <a id="G6" runat="server" href="~/ProtectedContent/checkout">Finalize</a>
     <p>
 </asp:Content>
