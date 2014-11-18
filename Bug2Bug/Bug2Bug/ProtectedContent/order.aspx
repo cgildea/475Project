@@ -13,7 +13,7 @@
       </asp:ListBox>
    </p>
     <a id="G2" runat="server" href="~/ProtectedContent/books">Continue Shopping</a>
-    <a id="G3" runat="server" href="~/ProtectedContent/order">Check Out</a>
+    <a id="G3" runat="server" href="~/ProtectedContent/checkout">Check Out</a>
    <p>
       &nbsp;</p>
 </asp:Content>
