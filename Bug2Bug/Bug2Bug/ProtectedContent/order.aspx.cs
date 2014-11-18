@@ -20,19 +20,21 @@ namespace Bug2Bug.ProtectedContent
             
             string userId = "tempuserid";
 
-
             if (Session[userId] == null)
             {
                 List<string> intlist = new List<string>();
                 intlist.Add("your cart is empty");
                 shoppingCart.DataSource = intlist;
+
+                Label1.Text = String.Empty;
             }
             else 
             {
                 List<string> titleList = Session[userId] as List<string>;
                 dbcontext.Titles.Load();
                 
-                // query to get books for the selected author
+                // query to get books for the selected ISBN.
+                // Currently does not recognize quantity. Ignore?
                 var titlesQuery =
                     from book in dbcontext.Titles.Local
                     where titleList.Contains(book.ISBN)
@@ -43,6 +45,8 @@ namespace Bug2Bug.ProtectedContent
                         Title = book.Title1
                     };
 
+                int sum = titlesQuery.Select(c => c.Price).Sum();
+                Label1.Text = "Total: " + sum.ToString();
                 shoppingCart.DataSource = titlesQuery;
             }
 

@@ -237,6 +237,9 @@
     </Content>
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="ProtectedContent\Books.aspx" />
+    <Content Include="ProtectedContent\checkout.aspx" />
+    <Content Include="ProtectedContent\final.aspx" />
+    <Content Include="ProtectedContent\guestbook.aspx" />
     <Content Include="ProtectedContent\order.aspx" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
@@ -368,6 +371,24 @@
     </Compile>
     <Compile Include="ProtectedContent\Books.aspx.designer.cs">
       <DependentUpon>Books.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProtectedContent\checkout.aspx.cs">
+      <DependentUpon>checkout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProtectedContent\checkout.aspx.designer.cs">
+      <DependentUpon>checkout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProtectedContent\final.aspx.cs">
+      <DependentUpon>final.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProtectedContent\final.aspx.designer.cs">
+      <DependentUpon>final.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProtectedContent\guestbook.aspx.cs">
+      <DependentUpon>guestbook.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProtectedContent\guestbook.aspx.designer.cs">
+      <DependentUpon>guestbook.aspx</DependentUpon>
     </Compile>
     <Compile Include="ProtectedContent\order.aspx.cs">
       <DependentUpon>order.aspx</DependentUpon>

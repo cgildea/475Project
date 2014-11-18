@@ -11,6 +11,9 @@
     <p>
       <asp:ListBox ID="shoppingCart" runat="server" SelectionMode="Single" CssClass="form-select" >
       </asp:ListBox>
+    </p>
+    <p>
+        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
    </p>
     <a id="G2" runat="server" href="~/ProtectedContent/books">Continue Shopping</a>
     <a id="G3" runat="server" href="~/ProtectedContent/checkout">Check Out</a>
