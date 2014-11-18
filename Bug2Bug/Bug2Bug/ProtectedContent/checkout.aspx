@@ -15,14 +15,16 @@
         <ol>
          <li>
           <asp:Label runat="server" AssociatedControlID="CreditCard">Credit Card Info (Visa or MasterCharge)</asp:Label>
-          <asp:TextBox runat="server" ID="CreditCard" />
+          <asp:TextBox runat="server" ID="CreditCard"  />
+          <asp:RequiredFieldValidator runat="server" ControlToValidate="CreditCard"
+           CssClass="field-validation-error" ErrorMessage="This field is required." />
          </li>                   
         </ol>
+          <asp:LinkButton runat="server" CommandName="PayFinal" Text="Finalize" PostBackUrl="~/ProtectedContent/final.aspx" />
       </fieldset>
     
-
+    <p>
     <a id="G4" runat="server" href="~/ProtectedContent/Books">View More Books</a>
     <a id="G5" runat="server" href="~/ProtectedContent/order">Review Order</a>
-    <a id="G6" runat="server" href="~/ProtectedContent/final">Finalize</a>
-    <p>
+    </p>
 </asp:Content>
