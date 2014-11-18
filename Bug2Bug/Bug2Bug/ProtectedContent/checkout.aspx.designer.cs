@@ -13,13 +13,40 @@ namespace Bug2Bug.ProtectedContent {
     public partial class checkout {
         
         /// <summary>
-        /// checkoutCart control.
+        /// shoppingCart control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox checkoutCart;
+        protected global::System.Web.UI.WebControls.ListBox shoppingCart;
+        
+        /// <summary>
+        /// subtotalText control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label subtotalText;
+        
+        /// <summary>
+        /// taxText control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label taxText;
+        
+        /// <summary>
+        /// totalText control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label totalText;
         
         /// <summary>
         /// CreditCard control.

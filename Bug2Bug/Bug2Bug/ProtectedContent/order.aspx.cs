@@ -25,8 +25,6 @@ namespace Bug2Bug.ProtectedContent
                 List<string> intlist = new List<string>();
                 intlist.Add("your cart is empty");
                 shoppingCart.DataSource = intlist;
-
-                Label1.Text = String.Empty;
             }
             else 
             {
@@ -45,8 +43,6 @@ namespace Bug2Bug.ProtectedContent
                         Title = book.Title1
                     };
 
-                int sum = titlesQuery.Select(c => c.Price).Sum();
-                Label1.Text = "Total: " + sum.ToString();
                 shoppingCart.DataSource = titlesQuery;
             }
 

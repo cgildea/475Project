@@ -6,8 +6,24 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
     <p>Books Ordered:</p>
     <p>
-      <asp:ListBox ID="checkoutCart" runat="server" SelectionMode="Single" CssClass="form-select" >
+      <asp:ListBox ID="shoppingCart" runat="server" SelectionMode="Single" CssClass="form-select" >
       </asp:ListBox>
+    </p>
+    <p>
+        <table>
+            <tr>
+                <td style="text-align:right;">Subtotal:</td>
+                <td style="text-align:right;"><asp:Label ID="subtotalText" runat="server" Text=""></asp:Label></td>
+            </tr>
+            <tr>
+                <td style="text-align:right;">Tax:</td>
+                <td style="text-align:right;"><asp:Label ID="taxText" runat="server" Text=""></asp:Label></td>
+            </tr>
+            <tr>
+                <td style="text-align:right;">Total:</td>
+                <td style="text-align:right;"><asp:Label ID="totalText" runat="server" Text=""></asp:Label></td>
+            </tr>
+        </table>
     </p>
 
     

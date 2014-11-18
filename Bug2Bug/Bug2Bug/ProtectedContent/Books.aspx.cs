@@ -82,8 +82,7 @@ namespace Bug2Bug.ProtectedContent
               titlesList = Session[userId] as List<string>;
           }
 
-          int index = titlesGridView.SelectedIndex;
-          titlesList.Add(titlesGridView.Rows[index].Cells[1].Text);
+           titlesList.Add(titlesGridView.SelectedRow.Cells[1].Text);
 
           Session[userId] = titlesList;
 
