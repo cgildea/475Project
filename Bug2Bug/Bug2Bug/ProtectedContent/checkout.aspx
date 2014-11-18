@@ -10,11 +10,16 @@
       </asp:ListBox>
     </p>
 
-    <p>Types of Payments (Visa or MasterCharge):
-      <asp:FormView ID="VisaForm" runat="server">
-
-      </asp:FormView>
-    </p>
+    
+      <fieldset>
+        <ol>
+         <li>
+          <asp:Label runat="server" AssociatedControlID="CreditCard">Credit Card Info (Visa or MasterCharge)</asp:Label>
+          <asp:TextBox runat="server" ID="CreditCard" />
+         </li>                   
+        </ol>
+      </fieldset>
+    
 
     <a id="G4" runat="server" href="~/ProtectedContent/Books">Review Shopping Cart</a>
     <a id="G5" runat="server" href="~/ProtectedContent/order">Review Order</a>

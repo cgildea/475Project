@@ -22,13 +22,13 @@ namespace Bug2Bug.ProtectedContent {
         protected global::System.Web.UI.WebControls.ListBox checkoutCart;
         
         /// <summary>
-        /// VisaForm control.
+        /// CreditCard control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FormView VisaForm;
+        protected global::System.Web.UI.WebControls.TextBox CreditCard;
         
         /// <summary>
         /// G4 control.
