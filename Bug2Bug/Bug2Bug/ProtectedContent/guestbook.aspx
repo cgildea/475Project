@@ -29,6 +29,9 @@
             </asp:GridView>
             <asp:SqlDataSource runat="server" ID="GuestbookDB" ConnectionString='<%$ ConnectionStrings:GuestbookConnection %>' SelectCommand="SELECT * FROM [Table]"></asp:SqlDataSource>
         </ContentTemplate>
+        <Triggers>
+            <asp:AsyncPostBackTrigger ControlID="SubmitBtn" EventName="Click" />
+        </Triggers>
     </asp:UpdatePanel>
     <fieldset>
         <ol>
@@ -51,6 +54,16 @@
                     CssClass="field-validation-error" ErrorMessage="A message is required." />
             </li>
         </ol>
-        <asp:Button runat="server" CommandName="MoveNext" Text="Submit" />
     </fieldset>
+    <p>
+            <asp:Button runat="server" CommandName="MoveNext" Text="Submit" ID="SubmitBtn" />
+        </p>
+    <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+        <ContentTemplate>
+            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+        </ContentTemplate>
+        <Triggers>
+            <asp:AsyncPostBackTrigger ControlID="SubmitBtn" EventName="Click" />
+        </Triggers>
+    </asp:UpdatePanel>
 </asp:Content>
