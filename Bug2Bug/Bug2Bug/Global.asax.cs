@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Http;
 using System.Web.Optimization;
 using System.Web.Routing;
 using System.Web.Security;
@@ -18,6 +19,14 @@ namespace Bug2Bug
          AuthConfig.RegisterOpenAuth();
          RouteConfig.RegisterRoutes(RouteTable.Routes);
       }
+      public static void RegisterRoutes(HttpConfiguration config)
+      {
+          config.Routes.MapHttpRoute(
+              name: "Default",
+              routeTemplate: "{controller}/{id}",
+              defaults: new { id = RouteParameter.Optional }
+          );
+      }  
 
       void Application_End(object sender, EventArgs e)
       {
