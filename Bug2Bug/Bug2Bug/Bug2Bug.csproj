@@ -260,6 +260,23 @@
       <DependentUpon>BooksModel.edmx</DependentUpon>
       <LastGenOutput>BooksModel.cs</LastGenOutput>
     </Content>
+    <EntityDeploy Include="GuestbookModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GuestbookModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="GuestbookModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GuestbookModel.edmx</DependentUpon>
+      <LastGenOutput>GuestbookModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="GuestbookModel.edmx.diagram">
+      <DependentUpon>GuestbookModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="GuestbookModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GuestbookModel.edmx</DependentUpon>
+      <LastGenOutput>GuestbookModel.cs</LastGenOutput>
+    </Content>
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="ProtectedContent\Books.aspx" />
     <Content Include="ProtectedContent\checkout.aspx" />
@@ -388,6 +405,24 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GuestbookEntry.cs">
+      <DependentUpon>GuestbookModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GuestbookModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GuestbookModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GuestbookModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GuestbookModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GuestbookModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GuestbookModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProtectedContent\Books.aspx.cs">

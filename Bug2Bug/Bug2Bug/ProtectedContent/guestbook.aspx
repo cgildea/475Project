@@ -8,12 +8,12 @@
     <p>Guest Book</p>
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
-            <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False" DataKeyNames="name" DataSourceID="GuestbookDB">
+            <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False" DataKeyNames="name,email,message" DataSourceID="GuestbookDB">
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                 <Columns>
                     <asp:BoundField DataField="name" HeaderText="name" ReadOnly="True" SortExpression="name"></asp:BoundField>
-                    <asp:BoundField DataField="email" HeaderText="email" SortExpression="email"></asp:BoundField>
-                    <asp:BoundField DataField="message" HeaderText="message" SortExpression="message"></asp:BoundField>
+                    <asp:BoundField DataField="email" HeaderText="email" SortExpression="email" ReadOnly="True"></asp:BoundField>
+                    <asp:BoundField DataField="message" HeaderText="message" SortExpression="message" ReadOnly="True"></asp:BoundField>
                 </Columns>
 
                 <EditRowStyle BackColor="#999999" />
@@ -27,7 +27,7 @@
                 <SortedDescendingCellStyle BackColor="#FFFDF8" />
                 <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
             </asp:GridView>
-            <asp:SqlDataSource runat="server" ID="GuestbookDB" ConnectionString='<%$ ConnectionStrings:GuestbookConnection %>' SelectCommand="SELECT * FROM [Table]"></asp:SqlDataSource>
+            <asp:SqlDataSource runat="server" ID="GuestbookDB" ConnectionString='<%$ ConnectionStrings:ConnectionString %>' SelectCommand="SELECT * FROM [GuestbookEntry]"></asp:SqlDataSource>
         </ContentTemplate>
         <Triggers>
             <asp:AsyncPostBackTrigger ControlID="SubmitBtn" EventName="Click" />
@@ -56,7 +56,7 @@
         </ol>
     </fieldset>
     <p>
-            <asp:Button runat="server" CommandName="MoveNext" Text="Submit" ID="SubmitBtn" />
+            <asp:Button runat="server" CommandName="MoveNext" Text="Submit" ID="SubmitBtn" OnClick="SubmitBtn_Click" />
         </p>
     <asp:UpdatePanel ID="UpdatePanel2" runat="server">
         <ContentTemplate>
