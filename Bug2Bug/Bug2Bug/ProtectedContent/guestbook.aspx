@@ -6,6 +6,7 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
     <p>Guest Book</p>
+
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
             <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False" DataKeyNames="name,email,message" DataSourceID="GuestbookDB">
@@ -33,6 +34,7 @@
             <asp:AsyncPostBackTrigger ControlID="SubmitBtn" EventName="Click" />
         </Triggers>
     </asp:UpdatePanel>
+
     <fieldset>
         <ol>
             <li>
@@ -56,14 +58,6 @@
         </ol>
     </fieldset>
     <p>
-            <asp:Button runat="server" CommandName="MoveNext" Text="Submit" ID="SubmitBtn" OnClick="SubmitBtn_Click" />
-        </p>
-    <asp:UpdatePanel ID="UpdatePanel2" runat="server">
-        <ContentTemplate>
-            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-        </ContentTemplate>
-        <Triggers>
-            <asp:AsyncPostBackTrigger ControlID="SubmitBtn" EventName="Click" />
-        </Triggers>
-    </asp:UpdatePanel>
+        <asp:Button runat="server" CommandName="MoveNext" Text="Submit" ID="SubmitBtn" OnClick="SubmitBtn_Click" />
+    </p>
 </asp:Content>

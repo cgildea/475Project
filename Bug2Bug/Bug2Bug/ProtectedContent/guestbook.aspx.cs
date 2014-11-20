@@ -10,28 +10,31 @@ namespace Bug2Bug.ProtectedContent
 {
     public partial class guestbook : System.Web.UI.Page
     {
-        // Entity Framework DbContext
-        //GuestbookEntities dbcontext = new GuestbookEntities();
-       
         protected void Page_Load(object sender, EventArgs e)
         {
-            Label1.Text = "Time is " + DateTime.Now.ToString();
-
         }
 
         protected void SubmitBtn_Click(object sender, EventArgs e)
         {
             // new entry to add
             GuestbookEntry newEntry = new GuestbookEntry();
-            newEntry.name = "Angel M";
-            newEntry.email = "angelm@marquez.com";
-            newEntry.message = "BLUE DYNAMO!";
+            newEntry.name = GuestName.Text;
+            newEntry.email = GuestEmail.Text;
+            newEntry.message = Message.Text;
 
             using (var dbCtx = new GuestbookEntities())
             {
-                dbCtx.GuestbookEntries.Add(newEntry);
-                dbCtx.SaveChanges();
+                try
+                {
+                    dbCtx.GuestbookEntries.Add(newEntry);
+                    dbCtx.SaveChanges();
+                }
+                catch
+                {
+                    Console.WriteLine(e);
+                }
             }
+            GridView1.DataBind();
         }
     }
 }
