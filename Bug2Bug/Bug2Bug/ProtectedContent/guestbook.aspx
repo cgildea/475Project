@@ -48,6 +48,8 @@
                 <asp:TextBox runat="server" ID="GuestEmail" />
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="GuestEmail"
                     CssClass="field-validation-error" ErrorMessage="An email address field is required." />
+                <asp:RegularExpressionValidator ControlToValidate="GuestEmail" runat="server"
+                    CssClass="field-validation-error" ErrorMessage="Invalid email." ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
             </li>
             <li>
                 <asp:Label runat="server" AssociatedControlID="Message">Message</asp:Label>

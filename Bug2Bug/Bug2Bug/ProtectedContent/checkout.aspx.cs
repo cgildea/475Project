@@ -45,7 +45,7 @@ namespace Bug2Bug.ProtectedContent
                 decimal total = subtotal * (1 + tax);
 
                 subtotalText.Text = ((decimal)subtotal).ToString();
-                taxText.Text = tax.ToString();
+                taxText.Text = (tax*subtotal).ToString();
                 totalText.Text = total.ToString();
 
                 shoppingCart.DataSource = titlesQuery;
