@@ -7,7 +7,7 @@ namespace Bug2Bug.REST
 {
     public class AuthorService : IAuthorService
     {
-        public List<Author> GetBooksList()
+        public List<Author> GetAuthorsList()
         {
             using (BooksEntities entities = new BooksEntities())
             {

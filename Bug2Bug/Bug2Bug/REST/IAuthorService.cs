@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Object;
-using System.Attribute;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 
 namespace Bug2Bug
 {
+    [ServiceContract]
     public interface IAuthorService
     {
          [OperationContract]
@@ -20,12 +19,13 @@ namespace Bug2Bug
          Author GetAuthorById(string id);
          [OperationContract]
          [WebInvoke(UriTemplate = "AddAuthor/{name}")]
-         void AddAuthor(string name);
+         void AddAuthor(string fname, string lname);
          [OperationContract]
          [WebInvoke(UriTemplate = "UpdateAuthor/{id}/{name}")]
-         void UpdateAuthor(string id, string name);
+         void UpdateAuthor(string id, string fname, string lname);
          [OperationContract]
          [WebInvoke(UriTemplate = "DeleteAuthor/{id}")]
-         void DeleteAuthor(string id);
+         void DeleteAuthor(string id);
+
     }
 }
