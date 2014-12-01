@@ -18,6 +18,12 @@ namespace Bug2Bug
          BundleConfig.RegisterBundles(BundleTable.Bundles);
          AuthConfig.RegisterOpenAuth();
          RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+         RouteTable.Routes.MapHttpRoute(
+           name: "DefaultApi",
+           routeTemplate: "api/{controller}/{id}",
+           defaults: new { id = System.Web.Http.RouteParameter.Optional }
+           );
       }
       public static void RegisterRoutes(HttpConfiguration config)
       {

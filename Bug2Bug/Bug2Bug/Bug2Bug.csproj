@@ -96,6 +96,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.2\lib\net45\System.Web.Http.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -396,6 +400,9 @@
     <Compile Include="Author.cs">
       <DependentUpon>BooksModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="AuthorController.cs" />
+    <Compile Include="AuthorModel.cs" />
+    <Compile Include="AuthorRepository.cs" />
     <Compile Include="BooksModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -446,6 +453,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GuestbookModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="IAuthorRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProtectedContent\Books.aspx.cs">
       <DependentUpon>Books.aspx</DependentUpon>
@@ -482,8 +490,6 @@
     <Compile Include="ProtectedContent\order.aspx.designer.cs">
       <DependentUpon>order.aspx</DependentUpon>
     </Compile>
-    <Compile Include="REST\AuthorService.cs" />
-    <Compile Include="REST\IAuthorService.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
