@@ -25,6 +25,8 @@
         <tr>
             <td>First Name</td>
             <td><asp:TextBox runat="server" ID="fname" /></td>
+            <asp:RequiredFieldValidator runat="server" ControlToValidate="fname"
+                    CssClass="field-validation-error" ErrorMessage="Please enter an author name" />
         </tr>
         <tr>
             <td>Last Name</td>
