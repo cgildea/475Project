@@ -43,6 +43,20 @@ namespace Bug2Bug
                 throw new Exception("Something went wrong");
             }
         }
+        public AuthorModel GetAuthor(string lname)
+        {
+            try
+            {
+                using (BooksEntities entities = new BooksEntities())
+                {
+                    return new AuthorModel(entities.Authors.FirstOrDefault(author => author.LastName == lname));
+                }
+            }
+            catch
+            {
+                throw new Exception("Something went wrong");
+            }
+        }
         public string AddAuthor(AuthorModel auth)
         {
             using (BooksEntities entities = new BooksEntities())
@@ -73,14 +87,13 @@ namespace Bug2Bug
                 throw new Exception("Something went wrong");
             }
         }
-        public void DeleteAuthor(int id)
+        public void DeleteAuthor(string lname)
         {
             try
             {
-                int authorId = id;
                 using (BooksEntities entities = new BooksEntities())
                 {
-                    Author author = entities.Authors.SingleOrDefault(a => a.AuthorID == authorId);
+                    Author author = entities.Authors.SingleOrDefault(a => a.LastName == lname);
                     entities.Authors.Remove(author);
                     entities.SaveChanges();
                 }

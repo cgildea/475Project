@@ -302,6 +302,7 @@
       <LastGenOutput>GuestbookModel.cs</LastGenOutput>
     </Content>
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="ProtectedContent\AuthorManage.aspx" />
     <Content Include="ProtectedContent\Books.aspx" />
     <Content Include="ProtectedContent\checkout.aspx" />
     <Content Include="ProtectedContent\final.aspx" />
@@ -455,6 +456,13 @@
     </Compile>
     <Compile Include="IAuthorRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProtectedContent\AuthorManage.aspx.cs">
+      <DependentUpon>AuthorManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProtectedContent\AuthorManage.aspx.designer.cs">
+      <DependentUpon>AuthorManage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ProtectedContent\Books.aspx.cs">
       <DependentUpon>Books.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

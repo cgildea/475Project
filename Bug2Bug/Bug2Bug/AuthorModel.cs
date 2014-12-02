@@ -17,5 +17,10 @@ namespace Bug2Bug
             FirstName = author.FirstName;
             LastName = author.LastName;
         }
+        public AuthorModel(string fname, string lname)
+        {
+            FirstName = fname;
+            LastName = lname;
+        }
     }
 }

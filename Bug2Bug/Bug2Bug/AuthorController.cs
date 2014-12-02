@@ -22,14 +22,19 @@ namespace Bug2Bug
             var author = repository.GetAuthorById(id);
             return author;
         }
-        public string AddUser(AuthorModel author)
+        public AuthorModel GetAuthor(string lname)
+        {
+            var author = repository.GetAuthor(lname);
+            return author;
+        }
+        public string AddAuthor(AuthorModel author)
         {
             var response = repository.AddAuthor(author);
             return response;
         }
-        public void DeleteAuthor(int id)
+        public void DeleteAuthor(string lname)
         {
-            repository.DeleteAuthor(id);
+            repository.DeleteAuthor(lname);
         }
     }
 }

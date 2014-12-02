@@ -12,6 +12,7 @@ namespace Bug2Bug
         IEnumerable<string> GetAllAuthors();
         string AddAuthor(AuthorModel author);
         string GetAuthorById(int id);
+        string GetAuthor(string lname);
         void DeleteAuthor(int id);
     }
 }
