@@ -18,7 +18,12 @@ namespace Bug2Bug
         {
             this.Authors = new HashSet<Author>();
         }
-    
+
+        public override string ToString()
+        {
+            return Title1 + "\t($" + Price + ")";
+        }
+
         public string ISBN { get; set; }
         public string Title1 { get; set; }
         public int EditionNumber { get; set; }

@@ -20,7 +20,7 @@ namespace Bug2Bug.ProtectedContent
             if (Session[userId] == null)
             {
                 List<string> intlist = new List<string>();
-                intlist.Add("your cart is empty");
+                intlist.Add("Your cart is empty");
                 shoppingCart.DataSource = intlist;
             }
             else
@@ -33,12 +33,7 @@ namespace Bug2Bug.ProtectedContent
                 var titlesQuery =
                     from book in dbcontext.Titles.Local
                     where titleList.Contains(book.ISBN)
-                    select new
-                    {
-                        Price = book.Price,
-                        ISBN = book.ISBN,
-                        Title = book.Title1
-                    };
+                    select book;
 
                 int subtotal = titlesQuery.Select(c => c.Price).Sum();
                 decimal tax = 0.08M;

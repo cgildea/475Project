@@ -71,7 +71,6 @@ namespace Bug2Bug.ProtectedContent
        protected void add(object sender, EventArgs e)
       {
           string userId = "tempuserid";
-
           List<string> titlesList;
           if (Session[userId] == null)
           {

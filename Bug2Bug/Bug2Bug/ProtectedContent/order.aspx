@@ -13,7 +13,8 @@
       </asp:ListBox>
     </p>
     <a id="G2" runat="server" href="~/ProtectedContent/books">Continue Shopping</a>
-    <a id="G3" runat="server" href="~/ProtectedContent/checkout">Check Out</a>
-   <p>
-      &nbsp;</p>
+    <a id="G3" runat="server" href="~/ProtectedContent/checkout">Check Out</a>&nbsp;<p>
+    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Empty" Width="141px" />
+    <asp:Button ID="Button2" runat="server" Text="Remove" Width="184px" OnClick="Button2_Click" />
+    </p>
 </asp:Content>
