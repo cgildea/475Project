@@ -4,13 +4,14 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
    </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
-   <p>
+    <p>
       Select author:&nbsp;
-      <asp:DropDownList ID="authorsDropDownList" runat="server" AutoPostBack="True"  OnSelectedIndexChanged="authorsDropDownList_SelectedIndexChanged">
+      <asp:DropDownList ID="authorsDropDownList" runat="server" AutoPostBack="True" OnSelectedIndexChanged="authorsDropDownList_SelectedIndexChanged">
       </asp:DropDownList>
    </p>
    <p>
-      <asp:GridView ID="titlesGridView" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="add" >
+      <asp:GridView ID="titlesGridView" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" 
+          OnSelectedIndexChanged="add" AllowPaging="false" OnPageIndexChanging="titlesGridView_PageIndexChanging" PageSize="4">
          <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
           <Columns>
               <asp:CommandField ShowSelectButton="True"></asp:CommandField>

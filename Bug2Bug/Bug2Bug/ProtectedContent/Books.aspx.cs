@@ -1,10 +1,12 @@
 ﻿// Fig. 29.11: Books.aspx.cs
 // Code-behind file for the password-protected Books page.
 using System;
+using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Collections.Generic;
 using Bug2Bug;
+using System.Web.UI.WebControls;
 
 namespace Bug2Bug.ProtectedContent
 {
@@ -85,8 +87,32 @@ namespace Bug2Bug.ProtectedContent
 
           Session[userId] = titlesList;
 
-          Response.Redirect("~/ProtectedContent/order");
+          //Response.Redirect("~/ProtectedContent/order");
       }
+
+       protected void titlesGridView_PageIndexChanging(object sender, GridViewPageEventArgs e)
+       {
+           dbcontext.Authors.Load(); // load Authors table into memory
+           titlesGridView.PageIndex = e.NewPageIndex;
+
+           // use LINQ to get Author object for the selected author
+           // Author selectedAuthor =
+           var selectedAuthor =
+           (from author in dbcontext.Authors.Local
+            where author.AuthorID ==
+            Convert.ToInt32(authorsDropDownList.SelectedValue)
+            // select author).First();
+            select author).First();
+           // query to get books for the selected author
+           var titlesQuery =
+           from book in selectedAuthor.Titles
+           orderby book.Title1
+           select book;
+
+           // set titlesQuery as the titlesGridView's data source
+           titlesGridView.DataSource = titlesQuery.ToList();
+           titlesGridView.DataBind(); // displays query results 
+       } // end method authorsDropDownList_SelectedIndexChanged
    } // end class Books
 } // end namespace Bug2Bug.ProtectedContent
 
