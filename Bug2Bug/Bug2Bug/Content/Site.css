@@ -734,27 +734,5 @@ tr.pager td {
 /* END: Mobile Styles */
 
 .calloutHighlight {
-  padding: 0px 10px;
-  color: black;
-  background: gold;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-  visibility: visible;
-  opacity: 0.8;
-  position: relative;
-  margin-top: -15px;
-  margin-left: 15px;
-  z-index: 999;
-}
-.calloutHighlight:after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: 100%;
-  margin-top: -8px;
-  width: 0; height: 0;
-  border-right: 8px solid gold;
-  border-top: 8px solid transparent;
-  border-bottom: 8px solid transparent;
+  color: #efeeef;
 }
