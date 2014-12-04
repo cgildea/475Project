@@ -7,13 +7,12 @@
       <Schema Namespace="GuestbookModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="GuestbookEntry">
           <Key>
-            <PropertyRef Name="name" />
-            <PropertyRef Name="email" />
-            <PropertyRef Name="message" />
+            <PropertyRef Name="id" />
           </Key>
           <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="message" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="id" Type="bigint" Nullable="false" />
         </EntityType>
         <EntityContainer Name="GuestbookModelStoreContainer">
           <EntitySet Name="GuestbookEntry" EntityType="Self.GuestbookEntry" Schema="dbo" store:Type="Tables" />
@@ -25,13 +24,12 @@
       <Schema Namespace="GuestbookModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="GuestbookEntry">
           <Key>
-            <PropertyRef Name="name" />
-            <PropertyRef Name="email" />
-            <PropertyRef Name="message" />
+            <PropertyRef Name="id" />
           </Key>
           <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="message" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="id" Type="Int64" Nullable="false" />
         </EntityType>
         <EntityContainer Name="GuestbookEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="GuestbookEntries" EntityType="Self.GuestbookEntry" />
@@ -48,6 +46,7 @@
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="email" ColumnName="email" />
                 <ScalarProperty Name="message" ColumnName="message" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

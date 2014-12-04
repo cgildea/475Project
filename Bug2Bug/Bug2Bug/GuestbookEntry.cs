@@ -17,5 +17,6 @@ namespace Bug2Bug
         public string name { get; set; }
         public string email { get; set; }
         public string message { get; set; }
+        public long id { get; set; }
     }
 }

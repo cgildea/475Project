@@ -26,6 +26,7 @@ namespace Bug2Bug.ProtectedContent
             {
                 try
                 {
+                    newEntry.id = dbCtx.GuestbookEntries.Count()+1;
                     dbCtx.GuestbookEntries.Add(newEntry);
                     dbCtx.SaveChanges();
                 }
