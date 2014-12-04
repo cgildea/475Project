@@ -50,24 +50,7 @@ namespace Bug2Bug.ProtectedContent
       protected void authorsDropDownList_SelectedIndexChanged(
          object sender, EventArgs e)
       {
-         dbcontext.Authors.Load(); // load Authors table into memory
-
-         // use LINQ to get Author object for the selected author
-         Author selectedAuthor =
-            (from author in dbcontext.Authors.Local
-             where author.AuthorID == 
-                Convert.ToInt32(authorsDropDownList.SelectedValue)
-             select author).First();
-
-         // query to get books for the selected author
-         var titlesQuery =
-            from book in selectedAuthor.Titles
-            orderby book.Title1
-            select book;
-
-         // set titlesQuery as the titlesGridView's data source
-         titlesGridView.DataSource = titlesQuery;
-         titlesGridView.DataBind(); // displays query results  
+          titlesGridView.SetPageIndex(0);
       } // end method authorsDropDownList_SelectedIndexChanged
 
        protected void add(object sender, EventArgs e)

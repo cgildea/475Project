@@ -11,7 +11,7 @@
    </p>
    <p>
       <asp:GridView ID="titlesGridView" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" 
-          OnSelectedIndexChanged="add" AllowPaging="false" OnPageIndexChanging="titlesGridView_PageIndexChanging" PageSize="4">
+          OnSelectedIndexChanged="add" AllowPaging="true" OnPageIndexChanging="titlesGridView_PageIndexChanging" PageSize="4">
          <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
           <Columns>
               <asp:CommandField ShowSelectButton="True"></asp:CommandField>
