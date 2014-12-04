@@ -47,7 +47,7 @@
                 <asp:Label runat="server" AssociatedControlID="GuestEmail">Email address</asp:Label>
                 <asp:TextBox runat="server" ID="GuestEmail" />
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="GuestEmail" ID="EmailReqValid" ErrorMessage="An email address field is required." Display="Dynamic"  CssClass="calloutHighlight" />
-                <asp:RegularExpressionValidator ControlToValidate="GuestEmail" runat="server" ID="EmailInvalid" ErrorMessage="Invalid email." ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" Display="Dynamic" />
+                <asp:RegularExpressionValidator ControlToValidate="GuestEmail" runat="server" ID="EmailInvalid" ErrorMessage="Invalid email." ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" Display="Dynamic" CssClass="calloutHighlight" />
                 <ajaxToolkit:ValidatorCalloutExtender runat="server" TargetControlID="EmailReqValid" ID="EmailCallout1" />
                 <ajaxToolkit:ValidatorCalloutExtender runat="server" TargetControlID="EmailInvalid" ID="EmailCallout2" />
 

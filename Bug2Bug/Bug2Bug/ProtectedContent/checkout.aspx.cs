@@ -28,14 +28,19 @@ namespace Bug2Bug.ProtectedContent
                 List<string> titleList = Session[userId] as List<string>;
                 dbcontext.Titles.Load();
 
+                List<Title> titleQuery = new List<Title>();
                 // query to get books for the selected ISBN.
                 // Currently does not recognize quantity. Ignore?
-                var titlesQuery =
-                    from book in dbcontext.Titles.Local
-                    where titleList.Contains(book.ISBN)
-                    select book;
+                for (int i = 0; i < titleList.Count; i++)
+                {
+                    Title titlesQ =
+                        (from book in dbcontext.Titles.Local
+                         where titleList.ToArray()[i].Contains(book.ISBN)
+                         select new Title { ISBN = book.ISBN, Price = book.Price, Title1 = book.Title1 }).FirstOrDefault();
+                    titleQuery.Add(titlesQ);
+                }
 
-                int subtotal = titlesQuery.Select(c => c.Price).Sum();
+                int subtotal = titleQuery.Select(c => c.Price).Sum();
                 decimal tax = 0.08M;
                 decimal total = subtotal * (1 + tax);
 
@@ -43,7 +48,7 @@ namespace Bug2Bug.ProtectedContent
                 taxText.Text = (tax*subtotal).ToString();
                 totalText.Text = total.ToString();
 
-                shoppingCart.DataSource = titlesQuery;
+                shoppingCart.DataSource = titleQuery;
             }
 
             shoppingCart.DataBind();
