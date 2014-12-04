@@ -49,6 +49,24 @@ namespace Bug2Bug.ProtectedContent {
         protected global::System.Web.UI.WebControls.TextBox GuestName;
         
         /// <summary>
+        /// GuestNameValid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator GuestNameValid;
+        
+        /// <summary>
+        /// GuestNameCallout control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.ValidatorCalloutExtender GuestNameCallout;
+        
+        /// <summary>
         /// GuestEmail control.
         /// </summary>
         /// <remarks>
@@ -58,6 +76,42 @@ namespace Bug2Bug.ProtectedContent {
         protected global::System.Web.UI.WebControls.TextBox GuestEmail;
         
         /// <summary>
+        /// EmailReqValid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator EmailReqValid;
+        
+        /// <summary>
+        /// EmailInvalid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator EmailInvalid;
+        
+        /// <summary>
+        /// EmailCallout1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.ValidatorCalloutExtender EmailCallout1;
+        
+        /// <summary>
+        /// EmailCallout2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.ValidatorCalloutExtender EmailCallout2;
+        
+        /// <summary>
         /// Message control.
         /// </summary>
         /// <remarks>
@@ -65,6 +119,24 @@ namespace Bug2Bug.ProtectedContent {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Message;
+        
+        /// <summary>
+        /// MessageValid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator MessageValid;
+        
+        /// <summary>
+        /// MessageCallout control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.ValidatorCalloutExtender MessageCallout;
         
         /// <summary>
         /// SubmitBtn control.
