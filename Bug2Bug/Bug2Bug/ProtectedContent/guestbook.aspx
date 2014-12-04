@@ -40,26 +40,24 @@
             <li>
                 <asp:Label runat="server" AssociatedControlID="GuestName">Name</asp:Label>
                 <asp:TextBox runat="server" ID="GuestName"/>
-                <asp:RequiredFieldValidator runat="server" ControlToValidate="GuestName" ID="GuestNameValid" ErrorMessage="A name is required." Display="Dynamic"/>
-                <ajaxToolkit:ValidatorCalloutExtender runat="server" TargetControlID="GuestNameValid" ID="GuestNameCallout" HighlightCssClass="field-validation-error" />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="GuestName" ID="GuestNameValid" ErrorMessage="A name is required." Display="Dynamic" CssClass="calloutHighlight" />
+                <ajaxToolkit:ValidatorCalloutExtender runat="server" TargetControlID="GuestNameValid" ID="GuestNameCallout" />
             </li>
             <li>
                 <asp:Label runat="server" AssociatedControlID="GuestEmail">Email address</asp:Label>
                 <asp:TextBox runat="server" ID="GuestEmail" />
-                <asp:RequiredFieldValidator runat="server" ControlToValidate="GuestEmail" ID="EmailReqValid"
-                    CssClass="field-validation-error" ErrorMessage="An email address field is required." Display="Dynamic"/>
-                <asp:RegularExpressionValidator ControlToValidate="GuestEmail" runat="server" ID="EmailInvalid"
-                    CssClass="field-validation-error" ErrorMessage="Invalid email." ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" Display="Dynamic" />
-                <ajaxToolkit:ValidatorCalloutExtender runat="server" TargetControlID="EmailReqValid" ID="EmailCallout1" HighlightCssClass="ajax__validatorcallout_error_message_cell" PopupPosition="Right" />
-                <ajaxToolkit:ValidatorCalloutExtender runat="server" TargetControlID="EmailInvalid" ID="EmailCallout2" HighlightCssClass="field-validation-error" PopupPosition="Right" />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="GuestEmail" ID="EmailReqValid" ErrorMessage="An email address field is required." Display="Dynamic" CssClass="calloutHighlight" />
+                <asp:RegularExpressionValidator ControlToValidate="GuestEmail" runat="server" ID="EmailInvalid" ErrorMessage="Invalid email." ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" Display="Dynamic" CssClass="calloutHighlight" />
+                <ajaxToolkit:ValidatorCalloutExtender runat="server" TargetControlID="EmailReqValid" ID="EmailCallout1" PopupPosition="Right" />
+                <ajaxToolkit:ValidatorCalloutExtender runat="server" TargetControlID="EmailInvalid" ID="EmailCallout2" PopupPosition="Right" />
 
             </li>
             <li>
                 <asp:Label runat="server" AssociatedControlID="Message">Message</asp:Label>
                 <asp:TextBox runat="server" ID="Message" />
 
-                <asp:RequiredFieldValidator runat="server" ID="MessageValid" ControlToValidate="Message"
-                    CssClass="field-validation-error" ErrorMessage="A message is required." Display="Dynamic"/>
+                <asp:RequiredFieldValidator runat="server" ID="MessageValid" ControlToValidate="Message" ErrorMessage="A message is required." Display="Dynamic" CssClass="calloutHighlight" />
+                <ajaxToolkit:ValidatorCalloutExtender runat="server" TargetControlID="MessageValid" ID="MessageCallout" PopupPosition="Right" />
 
             </li>
         </ol>
