@@ -1,0 +1,50 @@
+﻿@model MvcBug2Bug.Models.Title
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Title</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ISBN)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ISBN)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Title1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Title1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EditionNumber)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EditionNumber)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Copyright)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Copyright)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Price)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Price)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {  id=Model.ISBN }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
