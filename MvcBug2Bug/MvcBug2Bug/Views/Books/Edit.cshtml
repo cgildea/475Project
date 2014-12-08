@@ -17,7 +17,7 @@
             @Html.LabelFor(model => model.ISBN)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.ISBN)
+           <input required @Html.EditorFor(model => model.ISBN) />
             @Html.ValidationMessageFor(model => model.ISBN)
         </div>
 
@@ -25,23 +25,21 @@
             @Html.LabelFor(model => model.Title1)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Title1)
-            @Html.ValidationMessageFor(model => model.Title1)
-        </div>
+            <input required @Html.EditorFor(model => model.Title1) />
+                   @Html.ValidationMessageFor(model => model.Title1)></div>
 
         <div class="editor-label">
             @Html.LabelFor(model => model.EditionNumber)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.EditionNumber)
-            @Html.ValidationMessageFor(model => model.EditionNumber)
-        </div>
+            <input required @Html.EditorFor(model => model.EditionNumber) />
+                   @Html.ValidationMessageFor(model => model.EditionNumber)></div>
 
         <div class="editor-label">
             @Html.LabelFor(model => model.Copyright)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Copyright)
+            <input required @html.editorfor(model=> model.Copyright) />
             @Html.ValidationMessageFor(model => model.Copyright)
         </div>
 
@@ -49,9 +47,8 @@
             @Html.LabelFor(model => model.Price)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Price)
-            @Html.ValidationMessageFor(model => model.Price)
-        </div>
+            <input required @Html.EditorFor(model => model.Price) />
+                   @Html.ValidationMessageFor(model => model.Price)></div>
 
         <p>
             <input type="submit" value="Save" />

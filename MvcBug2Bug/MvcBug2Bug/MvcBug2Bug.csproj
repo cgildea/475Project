@@ -355,6 +355,7 @@
     <Content Include="Views\Books\Create.cshtml" />
     <Content Include="Views\Books\Edit.cshtml" />
     <Content Include="Views\Books\Delete.cshtml" />
+    <Content Include="Views\Books\SearchIndex.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

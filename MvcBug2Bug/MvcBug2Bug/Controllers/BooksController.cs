@@ -88,6 +88,18 @@ namespace MvcBug2Bug.Controllers
             return View(title);
         }
 
+        public ActionResult SearchIndex(string searchString)
+        {
+            var books = from b in db.Titles
+                        select b;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                books = books.Where(s => s.Authors.Any(t => t.LastName.Equals(searchString)));
+            }
+
+            return View(books);
+        }
+
         //
         // GET: /Books/Delete/5
 
