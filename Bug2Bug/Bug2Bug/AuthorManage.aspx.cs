@@ -15,34 +15,38 @@ namespace Bug2Bug
 
         protected async void getAuthorButton_Click(object obj, EventArgs e)
         {
-            String result = await client.GetStringAsync(new Uri("http://localhost:52430/ServiceHandler.svc/GetAuthor/" + lname.Text));
-            XDocument xmlResponse = XDocument.Parse(result);
+            String result = await client.GetStringAsync(new Uri("http://localhost:52430/ServiceHandler.svc/GetAuthor/" + searchlname.Text));
+            XDocument xmlResult = XDocument.Parse(result, LoadOptions.PreserveWhitespace);
 
-            output.Text = null;
-            if (!xmlResponse.Root.Elements().Any())
+            serverResponse.Text = null;
+            if (!xmlResult.Root.Elements().Any())
             {
-                output.Text = "No author with that name";
+                serverResponse.Text = "No author with that name";
             }
             else
             {
-                foreach (XElement element in xmlResponse.Root.Elements())
+                foreach (XElement element in xmlResult.Root.Elements())
                 {
-                    output.Text += element.Value + "\r\n";
+                    serverResponse.Text += element.Value + "\r\n";
 
                 }
             }
+        }
+        public static string GetAttributeValue(XElement element, XName name)
+        {
+            var attribute = element.Attribute(name);
+            return attribute != null ? attribute.Value : null;
         }
 
         protected async void addAuthorButton_Click(object obj, EventArgs e)
         {
             if (addfname.Text != string.Empty && addlname.Text != string.Empty)
             {
-                String result = await client.GetStringAsync(new Uri("http://localhost:52430/ServiceHandler.svc/AddAuthor/" + addfname.Text + "/" + addlname.Text));
-                output.Text = null;
+                serverResponse.Text = null;
                 HttpResponseMessage response = await client.GetAsync(new Uri("http://localhost:52430/ServiceHandler.svc/AddAuthor/" + addfname.Text + "/" + addlname.Text));
                 if (response.StatusCode == System.Net.HttpStatusCode.OK)
                 {
-                    output.Text = "Author " + addfname.Text + " " + addlname.Text + " successfully added";
+                    serverResponse.Text = addfname.Text + " " + addlname.Text + " added!";
                 }
             }
 

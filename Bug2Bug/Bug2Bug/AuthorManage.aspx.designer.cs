@@ -13,42 +13,6 @@ namespace Bug2Bug {
     public partial class AuthorManage {
         
         /// <summary>
-        /// lnameLabel1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lnameLabel1;
-        
-        /// <summary>
-        /// lname control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox lname;
-        
-        /// <summary>
-        /// RequiredLNameSearchValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredLNameSearchValidator;
-        
-        /// <summary>
-        /// UpdateButton1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button UpdateButton1;
-        
-        /// <summary>
         /// addLabel1 control.
         /// </summary>
         /// <remarks>
@@ -112,12 +76,48 @@ namespace Bug2Bug {
         protected global::System.Web.UI.WebControls.Button UpdateButton2;
         
         /// <summary>
-        /// output control.
+        /// LastNameLabel1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox output;
+        protected global::System.Web.UI.WebControls.Label LastNameLabel1;
+        
+        /// <summary>
+        /// searchlname control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox searchlname;
+        
+        /// <summary>
+        /// RequiredLNameSearchValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredLNameSearchValidator;
+        
+        /// <summary>
+        /// UpdateButton1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button UpdateButton1;
+        
+        /// <summary>
+        /// serverResponse control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox serverResponse;
     }
 }

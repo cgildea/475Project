@@ -17,7 +17,7 @@ namespace Bug2Bug
         [WebGet(UriTemplate = "GetAuthor/{lname}")]
         AuthorModel[] GetAuthorByName(string lname);
         [OperationContract]
-        [WebInvoke(UriTemplate = "AddAuthor/{fname}/{lname}")]
+        [WebGet(UriTemplate = "AddAuthor/{fname}/{lname}")]
         void AddAuthor(string fname, string lname);
     }
 }
