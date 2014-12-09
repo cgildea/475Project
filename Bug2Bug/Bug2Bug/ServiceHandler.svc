@@ -1,0 +1,1 @@
+﻿﻿<%@ ServiceHost Language=c# Service="Bug2Bug.AuthorController" %>

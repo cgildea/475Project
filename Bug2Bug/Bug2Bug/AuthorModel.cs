@@ -1,26 +1,20 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Web;
 
 namespace Bug2Bug
 {
     public class AuthorModel
     {
-        public int Id { get; set; }
+        [DataMember]
         public string FirstName { get; set; }
-        public string LastName { get; set; }
-
-        public AuthorModel(Author author)
-        {
-            Id = author.AuthorID;
-            FirstName = author.FirstName;
-            LastName = author.LastName;
-        }
-        public AuthorModel(string fname, string lname)
-        {
-            FirstName = fname;
-            LastName = lname;
-        }
+        [DataMember]
+    	public string LastName{get;set;}
+	    public AuthorModel(){}
+	    public override string ToString(){
+            return String.Format("{0}  {1}", FirstName, LastName);
+	    }
     }
 }

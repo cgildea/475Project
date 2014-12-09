@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -100,6 +101,11 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Forms.DataVisualization.Design" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -302,7 +308,7 @@
       <LastGenOutput>GuestbookModel.cs</LastGenOutput>
     </Content>
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
-    <Content Include="ProtectedContent\AuthorManage.aspx" />
+    <Content Include="AuthorManage.aspx" />
     <Content Include="ProtectedContent\Books.aspx" />
     <Content Include="ProtectedContent\checkout.aspx" />
     <Content Include="ProtectedContent\final.aspx" />
@@ -338,6 +344,7 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="ServiceHandler.svc" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -403,7 +410,6 @@
     </Compile>
     <Compile Include="AuthorController.cs" />
     <Compile Include="AuthorModel.cs" />
-    <Compile Include="AuthorRepository.cs" />
     <Compile Include="BooksModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -454,13 +460,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GuestbookModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="IAuthorRepository.cs" />
+    <Compile Include="IAuthorController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ProtectedContent\AuthorManage.aspx.cs">
+    <Compile Include="AuthorManage.aspx.cs">
       <DependentUpon>AuthorManage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ProtectedContent\AuthorManage.aspx.designer.cs">
+    <Compile Include="AuthorManage.aspx.designer.cs">
       <DependentUpon>AuthorManage.aspx</DependentUpon>
     </Compile>
     <Compile Include="ProtectedContent\Books.aspx.cs">

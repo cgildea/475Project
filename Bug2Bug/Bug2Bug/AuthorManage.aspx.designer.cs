@@ -7,37 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Bug2Bug.ProtectedContent {
+namespace Bug2Bug {
     
     
     public partial class AuthorManage {
         
         /// <summary>
-        /// Update control.
+        /// lnameLabel1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel Update;
-        
-        /// <summary>
-        /// AuthorsList_GridView control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView AuthorsList_GridView;
-        
-        /// <summary>
-        /// fname control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox fname;
+        protected global::System.Web.UI.WebControls.Label lnameLabel1;
         
         /// <summary>
         /// lname control.
@@ -49,48 +31,93 @@ namespace Bug2Bug.ProtectedContent {
         protected global::System.Web.UI.WebControls.TextBox lname;
         
         /// <summary>
-        /// btnSave control.
+        /// RequiredLNameSearchValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSave;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredLNameSearchValidator;
         
         /// <summary>
-        /// authorSearch control.
+        /// UpdateButton1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox authorSearch;
+        protected global::System.Web.UI.WebControls.Button UpdateButton1;
         
         /// <summary>
-        /// btnSearch control.
+        /// addLabel1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSearch;
+        protected global::System.Web.UI.WebControls.Label addLabel1;
         
         /// <summary>
-        /// authorDelete control.
+        /// addfname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox authorDelete;
+        protected global::System.Web.UI.WebControls.TextBox addfname;
         
         /// <summary>
-        /// btnDelete control.
+        /// RequiredAddFieldValidator1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDelete;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredAddFieldValidator1;
+        
+        /// <summary>
+        /// addLabel2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label addLabel2;
+        
+        /// <summary>
+        /// addlname control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox addlname;
+        
+        /// <summary>
+        /// RequiredAddFieldValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredAddFieldValidator2;
+        
+        /// <summary>
+        /// UpdateButton2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button UpdateButton2;
+        
+        /// <summary>
+        /// output control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox output;
     }
 }

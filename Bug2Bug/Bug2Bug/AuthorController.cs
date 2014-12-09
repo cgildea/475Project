@@ -7,34 +7,31 @@ using System.Web.Http;
 
 namespace Bug2Bug
 {
-    public class AuthorController : ApiController
+    public class AuthorController : IAuthorController
     {
-        static AuthorRepository repository = new AuthorRepository();
-
-        public IEnumerable<string> GetAllAuthors()
+        public List<Author> GetAuthorsList()
         {
-            var authors = repository.GetAllAuthors();
-            return authors;
+            using (BooksEntities entities = new BooksEntities())
+            {
+                return entities.Authors.ToList();
+            }
         }
-
-        public AuthorModel GetAuthorById(int id)
+        public AuthorModel[] GetAuthorByName(string lname)
         {
-            var author = repository.GetAuthorById(id);
-            return author;
+            using (BooksEntities tmp = new BooksEntities())
+            {
+                var matchingEntries = from Author in tmp.Authors where lname == Author.LastName select new AuthorModel {FirstName = Author.FirstName,  LastName = Author.LastName };
+                return matchingEntries.ToArray();
+            }
         }
-        public AuthorModel GetAuthor(string lname)
+        public void AddAuthor(string fname, string lname)
         {
-            var author = repository.GetAuthor(lname);
-            return author;
-        }
-        public string AddAuthor(AuthorModel author)
-        {
-            var response = repository.AddAuthor(author);
-            return response;
-        }
-        public void DeleteAuthor(string lname)
-        {
-            repository.DeleteAuthor(lname);
+            using (BooksEntities entities = new BooksEntities())
+            {
+                Author Author = new Author { FirstName = fname, LastName = lname };
+                entities.Authors.Add(Author);
+                entities.SaveChanges();
+            }
         }
     }
 }
