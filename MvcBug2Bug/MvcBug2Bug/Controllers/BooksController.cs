@@ -16,12 +16,17 @@ namespace MvcBug2Bug.Controllers
 
         //
         // GET: /Books/
-
-        public ActionResult Index()
+        public ActionResult Index(string searchString)
         {
-            return View(db.Titles.ToList());
-        }
+            var books = from b in db.Titles
+                        select b;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                books = books.Where(s => s.Authors.Any(t => t.LastName.Equals(searchString)));
+            }
 
+            return View(books);
+        }
         //
         // GET: /Books/Details/5
 
@@ -87,18 +92,6 @@ namespace MvcBug2Bug.Controllers
                 return RedirectToAction("Index");
             }
             return View(title);
-        }
-
-        public ActionResult SearchIndex(string searchString)
-        {
-            var books = from b in db.Titles
-                        select b;
-            if (!String.IsNullOrEmpty(searchString))
-            {
-                books = books.Where(s => s.Authors.Any(t => t.LastName.Equals(searchString)));
-            }
-
-            return View(books);
         }
 
         //
