@@ -6,44 +6,32 @@
 
 <h2>Details</h2>
 
-<fieldset>
-    <legend>Title</legend>
+<table>
+    <tr>
+        <td><i>@Html.DisplayNameFor(model => model.ISBN)</i></td>
+        <td>@Html.DisplayFor(model => model.ISBN)</td>
+    </tr>
 
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.ISBN)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.ISBN)
-    </div>
+    <tr>
+        <td><i>@Html.DisplayNameFor(model => model.Title1)</i></td>
+        <td>@Html.DisplayFor(model => model.Title1)</td>
+    </tr>
 
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.Title1)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Title1)
-    </div>
+    <tr>
+        <td><i>@Html.DisplayNameFor(model => model.EditionNumber)</i></td>
+        <td>@Html.DisplayFor(model => model.EditionNumber)</td>
+    </tr>
 
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.EditionNumber)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.EditionNumber)
-    </div>
+    <tr>
+        <td><i>@Html.DisplayNameFor(model => model.Copyright)</i></td>
+        <td>@Html.DisplayFor(model => model.Copyright)</td>
+    </tr>
 
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.Copyright)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Copyright)
-    </div>
-
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.Price)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Price)
-    </div>
-</fieldset>
+    <tr>
+        <td><i>@Html.DisplayNameFor(model => model.Price)</i></td>
+        <td>@Html.DisplayFor(model => model.Price)</td>
+    </tr>
+</table>
 <p>
     @Html.ActionLink("Edit", "Edit", new {  id=Model.ISBN }) |
     @Html.ActionLink("Back to List", "Index")
