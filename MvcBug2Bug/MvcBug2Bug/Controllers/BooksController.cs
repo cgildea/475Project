@@ -9,6 +9,7 @@ using MvcBug2Bug.Models;
 
 namespace MvcBug2Bug.Controllers
 {
+    [Authorize]
     public class BooksController : Controller
     {
         private BooksEntities db = new BooksEntities();
