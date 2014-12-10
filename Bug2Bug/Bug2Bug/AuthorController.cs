@@ -16,12 +16,12 @@ namespace Bug2Bug
                 return entities.Authors.ToList();
             }
         }
-        public AuthorModel[] GetAuthorByName(string lname)
+        public string[] GetAuthorByName(string lname)
         {
             using (BooksEntities tmp = new BooksEntities())
             {
                 var matchingEntries = from Author in tmp.Authors where lname == Author.LastName select new AuthorModel {FirstName = Author.FirstName,  LastName = Author.LastName };
-                return matchingEntries.ToArray();
+                return matchingEntries.ToArray().Select(i=>i.ToString()).ToArray();
             }
         }
         public void AddAuthor(string fname, string lname)

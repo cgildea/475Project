@@ -15,7 +15,7 @@ namespace Bug2Bug
         List<Author> GetAuthorsList();
         [OperationContract]
         [WebGet(UriTemplate = "GetAuthor/{lname}")]
-        AuthorModel[] GetAuthorByName(string lname);
+        string[] GetAuthorByName(string lname);
         [OperationContract]
         [WebGet(UriTemplate = "AddAuthor/{fname}/{lname}")]
         void AddAuthor(string fname, string lname);
